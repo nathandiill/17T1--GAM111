@@ -3,16 +3,16 @@ using System.Collections;
 
 public class SimpleCameraController : MonoBehaviour 
 {
-    public Transform lookAtTarget;
+    public GameObject Player;
+    public Vector3 Offset;
 
-	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+    {
+        Offset = transform.position - Player.transform.position;	
 	}
 	
-	// Update is called once per frame
 	void LateUpdate () 
     {
-        transform.LookAt(lookAtTarget);
-	}
+        transform.position = Player.transform.position + Offset;
+    }
 }
