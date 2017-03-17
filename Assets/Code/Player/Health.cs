@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
     public static Health Instance;
@@ -20,7 +21,10 @@ public class Health : MonoBehaviour {
         playerHPRemaining -= damageTaken;
 
         if (playerHPRemaining <= 0)
+        {
             Destroy(gameObject);
+            SceneManager.LoadScene(5);
+        }
     }
 
     void Update()
