@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SplashController : MonoBehaviour 
 {
-	public float timeToShow = 1, speedUpRate = 3;
+	public float timeToShow = 5, speedUpRate = 3;
 	private float counter;
 	public AnimationCurve alphaCurve = AnimationCurve.Linear(0,0,1,1);
 	public CanvasGroup canvasGroup;
