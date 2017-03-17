@@ -7,8 +7,8 @@ public class SimplePlayerController : MonoBehaviour {
     public float torqueScale = 1;
     public Vector3 previousTorque;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         rb = GetComponent<Rigidbody>();
 	}
 	

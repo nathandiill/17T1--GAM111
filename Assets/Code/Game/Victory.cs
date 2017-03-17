@@ -5,18 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Victory : MonoBehaviour {
 
-	void Start ()
-    {
-		
-	}
-	
-	void Update ()
-    {
-		
-	}
-
     void OnCollisionEnter()
     {
+        // On Collision with the final wall, load the victory scene
         SceneManager.LoadScene(4);
     }
 }

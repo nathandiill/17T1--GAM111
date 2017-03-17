@@ -8,11 +8,13 @@ public class SimpleCameraController : MonoBehaviour
 
 	void Start ()
     {
+        // Set the offset to the player position
         Offset = transform.position - Player.transform.position;	
 	}
 	
 	void LateUpdate () 
     {
+        // Add the offset
         transform.position = Player.transform.position + Offset;
     }
 }

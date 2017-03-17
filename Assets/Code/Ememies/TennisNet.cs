@@ -13,7 +13,11 @@ public class TennisNet : MonoBehaviour {
             var hp = col.gameObject.GetComponent<Health>();
             hp.TakeDamage(fixedDamage);
             col.rigidbody.AddForce((col.transform.position - transform.position).normalized * pushAwaySpeed, ForceMode.VelocityChange);
+            
+            // Call functions on other scripts
             SoundManager.Instance.TennisNetSound();
+            Score.Instance.TennisNetScore(-5);
+            Health.Instance.TakeDamage(20);
         }
     }
 }

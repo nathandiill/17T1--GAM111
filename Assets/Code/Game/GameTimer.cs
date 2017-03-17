@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
-
     public Text TimeRemaining;
     public float time;
 
@@ -17,6 +16,7 @@ public class GameTimer : MonoBehaviour
 
     void Update()
     {
+        // Countdown
         time -= Time.deltaTime;
 
         if (time > 0)
@@ -25,6 +25,7 @@ public class GameTimer : MonoBehaviour
         }
         else
         {
+            // Game Over
             SceneManager.LoadScene(5);
         }
     }

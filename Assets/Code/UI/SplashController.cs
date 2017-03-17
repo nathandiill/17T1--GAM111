@@ -9,7 +9,6 @@ public class SplashController : MonoBehaviour
 	public CanvasGroup canvasGroup;
 	public string nextSceneName;
 	
-	// Update is called once per frame
 	void Update () 
 	{
 		counter += Time.deltaTime * (Input.anyKey ? speedUpRate : 1 );

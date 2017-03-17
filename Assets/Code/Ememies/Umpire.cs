@@ -26,15 +26,17 @@ public class Umpire : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        //this needs to be more logical, possibly as a factor of combined mass
         var impact = col.impulse.magnitude;
         impact -= minThresholdToDamage;
-        SoundManager.Instance.UmpireSound();
 
         if (impact > 0)
         {
             hp.TakeDamage(impact);
         }
+
+        // Call functions on other scripts
+        SoundManager.Instance.UmpireSound();
+        Score.Instance.UmpireScore(10);
     }
 }
 
